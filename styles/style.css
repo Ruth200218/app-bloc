@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background-color: rgb(251, 244, 233);
+}
+body .container h1 {
+  text-align: center;
+}
+body .container .new h2,
+body .container .edit h2,
+body .container .save h2 {
+  padding: 10px 15px;
+}
+body .container .new .title-note,
+body .container .edit .title-note,
+body .container .save .title-note {
+  display: block;
+  padding: 8px 35px;
+  font-size: 20px;
+}
+body .container .new #note,
+body .container .edit #note,
+body .container .save #note {
+  border-radius: 10px;
+  padding: 45px 150px;
+  display: block;
+  margin: 10px 35px 25px;
+}
+body .container .new .btn,
+body .container .edit .btn,
+body .container .save .btn {
+  padding: 10px 5px;
+  margin-left: 200px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+}
+body .container .new btn:hover,
+body .container .edit btn:hover,
+body .container .save btn:hover {
+  background-color: #aaa;
+  cursor: pointer;
+}
+body .container .new .btn-save,
+body .container .edit .btn-save,
+body .container .save .btn-save {
+  background-color: rgb(2, 177, 2);
+}
+body .container .new .btn-cancel,
+body .container .edit .btn-cancel,
+body .container .save .btn-cancel {
+  background-color: rgb(205, 2, 2);
+  margin-left: 0px;
+}
+body .container .new .btn-edit,
+body .container .edit .btn-edit,
+body .container .save .btn-edit {
+  background-color: rgb(64, 121, 253);
+}
+body .container .new .btn-delete,
+body .container .edit .btn-delete,
+body .container .save .btn-delete {
+  background-color: rgb(205, 2, 2);
+  margin-left: 0px;
+}
+body .container .new .color-container #color-label,
+body .container .new .color-container #color,
+body .container .edit .color-container #color-label,
+body .container .edit .color-container #color,
+body .container .save .color-container #color-label,
+body .container .save .color-container #color {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(251, 244, 233);
+
+    .container {
+        h1 {
+            text-align: center;
+        }
+
+        .new,
+        .edit,
+        .save {
+            h2 {
+                padding: 10px 15px;
+            }
+
+            .title-note {
+                display: block;
+                padding: 8px 35px;
+                font-size: 20px;
+
+            }
+
+            #note {
+                border-radius: 10px;
+                padding: 45px 150px;
+                display: block;
+                margin: 10px 35px 25px;
+            }
+
+            .btn {
+                padding: 10px 5px;
+                margin-left: 200px;
+                border-radius: 5px;
+                font-size: 18px;
+                color: white;
+            }
+
+            btn:hover {
+                background-color: #aaa;
+                cursor: pointer;
+            }
+
+            .btn-save {
+                background-color: rgb(2, 177, 2);
+            }
+
+            .btn-cancel {
+                background-color: rgb(205, 2, 2);
+                margin-left: 0px;
+            }
+
+            .btn-edit {
+                background-color: rgb(64, 121, 253);
+            }
+
+            .btn-delete {
+                background-color: rgb(205, 2, 2);
+                margin-left: 0px;
+            }
+
+            .color-container {
+
+                #color-label,
+                #color {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                }
+            }
+        }
+    }
+}
