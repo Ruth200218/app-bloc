@@ -39,9 +39,9 @@ body .container .save .btn {
   font-size: 18px;
   color: white;
 }
-body .container .new btn:hover,
-body .container .edit btn:hover,
-body .container .save btn:hover {
+body .container .new .btn:hover,
+body .container .edit .btn:hover,
+body .container .save .btn:hover {
   background-color: #aaa;
   cursor: pointer;
 }
@@ -67,12 +67,8 @@ body .container .save .btn-delete {
   background-color: rgb(205, 2, 2);
   margin-left: 0px;
 }
-body .container .new .color-container #color-label,
-body .container .new .color-container #color,
-body .container .edit .color-container #color-label,
-body .container .edit .color-container #color,
-body .container .save .color-container #color-label,
-body .container .save .color-container #color {
+body .container .color-container #color-label,
+body .container .color-container #color {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
