@@ -5,73 +5,98 @@
 }
 
 body {
-  background-color: rgb(251, 244, 233);
+  background-color: rgb(248, 245, 240);
 }
-body .container h1 {
+body .container {
+  min-width: 300px;
+  max-width: 1000px;
+  width: 50%;
+}
+body .container .container-left h1 {
   text-align: center;
+  margin-top: 15px;
+  background-color: rgb(227, 192, 240);
+  border: 1px solid;
+  border-radius: 5px;
 }
-body .container .new h2,
-body .container .edit h2,
-body .container .save h2 {
+body .container .container-left .new h2,
+body .container .container-left .edit h2,
+body .container .container-left .save h2 {
   padding: 10px 15px;
 }
-body .container .new .title-note,
-body .container .edit .title-note,
-body .container .save .title-note {
+body .container .container-left .new .title-note,
+body .container .container-left .edit .title-note,
+body .container .container-left .save .title-note {
   display: block;
   padding: 8px 35px;
   font-size: 20px;
 }
-body .container .new #note,
-body .container .edit #note,
-body .container .save #note {
+body .container .container-left .new #note,
+body .container .container-left .edit #note,
+body .container .container-left .save #note {
   border-radius: 10px;
-  padding: 45px 150px;
+  padding: 10px 15px;
   display: block;
   margin: 10px 35px 25px;
+  resize: none;
+  font-size: 20px;
+  border: 5px solid #ccc;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
-body .container .new .btn,
-body .container .edit .btn,
-body .container .save .btn {
+body .container .container-left .new #note:focus,
+body .container .container-left .edit #note:focus,
+body .container .container-left .save #note:focus {
+  transition: 0.3s;
+  border-color: #564caf;
+}
+body .container .container-left .new .btn,
+body .container .container-left .edit .btn,
+body .container .container-left .save .btn {
   padding: 10px 5px;
-  margin-left: 200px;
+  margin-left: 300px;
   border-radius: 5px;
   font-size: 18px;
   color: white;
+  border: 5px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
-body .container .new .btn:hover,
-body .container .edit .btn:hover,
-body .container .save .btn:hover {
-  background-color: #aaa;
+body .container .container-left .new .btn:hover,
+body .container .container-left .edit .btn:hover,
+body .container .container-left .save .btn:hover {
+  background-color: #99da01;
   cursor: pointer;
+  transition: 0.5s;
 }
-body .container .new .btn-save,
-body .container .edit .btn-save,
-body .container .save .btn-save {
+body .container .container-left .new .btn-save,
+body .container .container-left .edit .btn-save,
+body .container .container-left .save .btn-save {
   background-color: rgb(2, 177, 2);
 }
-body .container .new .btn-cancel,
-body .container .edit .btn-cancel,
-body .container .save .btn-cancel {
+body .container .container-left .new .btn-cancel,
+body .container .container-left .edit .btn-cancel,
+body .container .container-left .save .btn-cancel {
   background-color: rgb(205, 2, 2);
   margin-left: 0px;
 }
-body .container .new .btn-edit,
-body .container .edit .btn-edit,
-body .container .save .btn-edit {
+body .container .container-left .new .btn-edit,
+body .container .container-left .edit .btn-edit,
+body .container .container-left .save .btn-edit {
   background-color: rgb(64, 121, 253);
 }
-body .container .new .btn-delete,
-body .container .edit .btn-delete,
-body .container .save .btn-delete {
+body .container .container-left .new .btn-delete,
+body .container .container-left .edit .btn-delete,
+body .container .container-left .save .btn-delete {
   background-color: rgb(205, 2, 2);
   margin-left: 0px;
 }
-body .container .color-container #color-label,
-body .container .color-container #color {
+body .container .container-left .color-container #color-label,
+body .container .container-left .color-container #color {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
+}
+body .container .container-left .save-note h3 {
+  padding: 10px 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

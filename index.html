@@ -3,49 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
     <title>Bloc de notas</title>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="title">Bloc de notas!</h1>
-        <div class="new">
-            <h2>Añade una nueva nota</h2>
-            <div>
-                <label class="title-note" for="note">Escribe una nota!</label>
-                <textarea id="note" rows="3" placeholder="Escribe tu nota aquí!" ref="textarea"></textarea>
+        <!--CONTAINER LEFT-->
+        <div class="container-left">
+            <h1 class="title">Bloc de notas!</h1>
+            <div class="new">
+                <h2>Añade una nueva nota</h2>
+                <div>
+                    <label class="title-note" for="note">Escribe una nota!</label>
+                    <textarea id="note" cols="60" rows="10" placeholder="Escribe tu nota aquí!"
+                        ref="textarea"></textarea>
+                </div>
+                <div>
+                    <button class="btn btn-save">Guardar</button>
+                </div>
             </div>
-            <div>
-                <button class="btn btn-save">Guardar</button>
+            <!-- <div class="edit">
+                <h2>Edita las notas</h2>
+                <div>
+                    <label class="title-note" for="note-edit">Nota:</label>
+                    <textarea id="note" rows="3" placeholder="Escribe tu nota aquí!" ref="textarea"></textarea>
+                </div>
+                <div>
+                    <button class="btn btn-save">Guardar</button>
+                    <button class="btn btn-cancel">Cancelar</button>
+                </div>
+            </div> -->
+            <!-- <div class="color-container">
+                <label id="color-label" for="color">Selecciona el color de la nota</label>
+                <input id="color" type="color">
+            </div> -->
+            <div class="save-note">
+                <h3> Notas guardadas</h3>
+                <!-- <h5>
+                    Aquí irá el tiempo y la fecha
+                </h5> -->
+                <!-- <button class="btn btn-edit">Editar</button>
+                <button class="btn btn-delete">Elminar</button> -->
             </div>
         </div>
-        <div class="edit">
-            <h2>Edita las notas</h2>
-            <div>
-                <label class="title-note" for="note-edit">Nota:</label>
-                <textarea id="note" rows="3" placeholder="Escribe tu nota aquí!" ref="textarea"></textarea>
-            </div>
-            <div>
-                <button class="btn btn-save">Guardar</button>
-                <button class="btn btn-cancel">Cancelar</button>
-            </div>
-        </div>
-        <div class="color-container">
-            <label id="color-label" for="color">Selecciona el color de la nota</label>
-            <input id="color" type="color">
-        </div>
-        <div class="save">
-            <h3>
-                <!-- Aquí irán las notas guardadas -->
-            </h3>
-            <h5>
-                <!-- Aquí irá el tiempo y la fecha-->
-            </h5>
-            <button class="btn btn-edit">Editar</button>
-            <button class="btn btn-delete">Elminar</button>
+        <!--CONTAINER RIGHT-->
+        <div class="container-right">
+
         </div>
     </div>
+
+    <script src="src/script.js"></script>
 </body>
 
 </html>
