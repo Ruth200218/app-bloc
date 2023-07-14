@@ -7,53 +7,54 @@
 body {
   background-color: rgb(248, 245, 240);
 }
-body .container {
-  min-width: 300px;
-  max-width: 1000px;
-  width: 50%;
-}
-body .container .container-left h1 {
-  text-align: center;
+body .container h1 {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px 20px;
   margin-top: 15px;
   background-color: rgb(227, 192, 240);
   border: 1px solid;
   border-radius: 5px;
 }
+body .container .container-left {
+  min-width: 300px;
+  max-width: 1000px;
+  width: 50%;
+}
 body .container .container-left .new h2,
-body .container .container-left .edit h2,
-body .container .container-left .save h2 {
+body .container .container-left .edit h2 {
   padding: 10px 15px;
 }
-body .container .container-left .new .title-note,
-body .container .container-left .edit .title-note,
-body .container .container-left .save .title-note {
-  display: block;
+body .container .container-left .new #title-note,
+body .container .container-left .edit #title-note {
   padding: 8px 35px;
+  margin: 10px 35px;
   font-size: 20px;
+  width: 50%;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
 body .container .container-left .new #note,
-body .container .container-left .edit #note,
-body .container .container-left .save #note {
-  border-radius: 10px;
+body .container .container-left .edit #note {
   padding: 10px 15px;
   display: block;
   margin: 10px 35px 25px;
   resize: none;
   font-size: 20px;
   border: 5px solid #ccc;
+  border-radius: 10px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
 body .container .container-left .new #note:focus,
-body .container .container-left .edit #note:focus,
-body .container .container-left .save #note:focus {
+body .container .container-left .edit #note:focus {
   transition: 0.3s;
   border-color: #564caf;
 }
 body .container .container-left .new .btn,
-body .container .container-left .edit .btn,
-body .container .container-left .save .btn {
+body .container .container-left .edit .btn {
   padding: 10px 5px;
-  margin-left: 300px;
+  margin-left: 280px;
   border-radius: 5px;
   font-size: 18px;
   color: white;
@@ -61,31 +62,26 @@ body .container .container-left .save .btn {
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
 body .container .container-left .new .btn:hover,
-body .container .container-left .edit .btn:hover,
-body .container .container-left .save .btn:hover {
+body .container .container-left .edit .btn:hover {
   background-color: #99da01;
   cursor: pointer;
   transition: 0.5s;
 }
 body .container .container-left .new .btn-save,
-body .container .container-left .edit .btn-save,
-body .container .container-left .save .btn-save {
+body .container .container-left .edit .btn-save {
   background-color: rgb(2, 177, 2);
 }
 body .container .container-left .new .btn-cancel,
-body .container .container-left .edit .btn-cancel,
-body .container .container-left .save .btn-cancel {
+body .container .container-left .edit .btn-cancel {
   background-color: rgb(205, 2, 2);
   margin-left: 0px;
 }
 body .container .container-left .new .btn-edit,
-body .container .container-left .edit .btn-edit,
-body .container .container-left .save .btn-edit {
+body .container .container-left .edit .btn-edit {
   background-color: rgb(64, 121, 253);
 }
 body .container .container-left .new .btn-delete,
-body .container .container-left .edit .btn-delete,
-body .container .container-left .save .btn-delete {
+body .container .container-left .edit .btn-delete {
   background-color: rgb(205, 2, 2);
   margin-left: 0px;
 }
@@ -95,8 +91,33 @@ body .container .container-left .color-container #color {
   padding: 12px 20px;
   margin: 8px 0;
 }
-body .container .container-left .save-note h3 {
+body .container .container-right {
+  min-width: 300px;
+  max-width: 1000px;
+  width: 50%;
+  margin-left: 50%;
+}
+body .container .container-right .save-note h2 {
   padding: 10px 15px;
+}
+body .container .container-right .save-note #note {
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: block;
+  margin: 10px 35px 25px;
+  resize: none;
+  font-size: 20px;
+  border: 5px solid #ccc;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+}
+body .container .container-right .save-note #title-note {
+  padding: 8px 35px;
+  margin: 10px 35px;
+  font-size: 20px;
+  width: 50%;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
 
 /*# sourceMappingURL=style.css.map */
