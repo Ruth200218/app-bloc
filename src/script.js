@@ -1,34 +1,30 @@
-const note = document.querySelector('#note');
 const btnSave = document.querySelector('.btn-save');
 const saveNote = document.querySelector('.save-note');
-const titleNote = document.querySelector('#title-note')
 const timeDate = document.querySelector('.time');
+const date = new Date();
 
+let count = 0;
 
-btnSave.addEventListener('click', (e) => {
-  const valueTitle = titleNote.value;
-  const valueNote = note.value;
-  const date = new Date();
-  
-  if (valueNote !== '') {
-    const values ={
-      title : valueTitle,
-      content : valueNote,
-      day : date.getDate(),
-      month : date.getMonth(),
-      year : date.getFullYear(),
-      hour : date.getHours(),
-      minutes : date.getMinutes(),
-      seconds : date.getSeconds()
-    };
+btnSave.addEventListener('click', ()=>{
+  const values = {
+    title : document.querySelector('#title-note').value,
+    content : document.querySelector('#note').value,
+    day : date.getDate(),
+    month : date.getMonth(),
+    year : date.getFullYear(),
+    hour : date.getHours(),
+    minutes : date.getMinutes(),
+    seconds : date.getSeconds()
+  }
+
+  localStorage.setItem(`note-${count}`, JSON.stringify(values));
+  count++;
+  const loadNote = JSON.parse(localStorage.getItem(`note-${count - 1}`));
     
-    localStorage.setItem('note', JSON.stringify(values));
-    const loadNote = JSON.parse(localStorage.getItem('note'));
+  const noteTitle = loadNote.title;
+  const noteContent = loadNote.content;
     
-    const noteTitle = loadNote.title;
-    const noteContent = loadNote.content;
-    
-    saveNote.innerHTML = `<p id="title-note">
+    saveNote.innerHTML += `<p id="title-note">
                             ${noteTitle}
                           </p>
                           <textarea id="note" cols="50" rows="10" ref="textarea">
@@ -42,24 +38,28 @@ btnSave.addEventListener('click', (e) => {
     const minutes = loadNote.minutes;
     const seconds = loadNote.seconds;
 
-    timeDate.innerHTML = `<p id='timeD'>
+    timeDate.innerHTML += `<p id='timeD'>
                           ${day}/${month}/${year} ${hour}:${minutes}:${seconds}
                           </p>`
 
-    titleNote.value = '';
-    note.value = '';
-  }
-});
+    values.title.value = '';
+    values.content.value = '';
 
-window.onload = function (){
-  if (localStorage.hasOwnProperty('note', 'date')){
-    const loadNote = JSON.parse(localStorage.getItem('note'));
+  });
+
+  window.onload = function (){
+  if (localStorage.hasOwnProperty(`note-${count}`)){
+    const loadNote = JSON.parse(localStorage.getItem(`note-${count}`));
     
     const noteTitle = loadNote.title;
     const noteContent = loadNote.content;
-    
-    saveNote.innerHTML = `<p id="title-note">${noteTitle}</p>
-    <textarea id="note" cols="50" rows="10" ref="textarea">${noteContent}</textarea>`;
+
+    saveNote.innerHTML += `<p id="title-note">
+                            ${noteTitle}
+                          </p>
+                          <textarea id="note" cols="50" rows="10" ref="textarea">
+                            ${noteContent}
+                          </textarea>`;
 
     const day = loadNote.day;
     const month = loadNote.month;
@@ -68,9 +68,8 @@ window.onload = function (){
     const minutes = loadNote.minutes;
     const seconds = loadNote.seconds;
 
-    timeDate.innerHTML = `<p id='timeD'>
+    timeDate.innerHTML += `<p id='timeD'>
                           ${day}/${month}/${year} ${hour}:${minutes}:${seconds}
                           </p>`
   }
 }
-
