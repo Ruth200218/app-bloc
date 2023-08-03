@@ -73,22 +73,10 @@ body .container .container-left .new .btn-save,
 body .container .container-left .edit .btn-save {
   background-color: rgb(2, 177, 2);
 }
-body .container .container-left .new .btn-cancel,
-body .container .container-left .edit .btn-cancel {
-  background-color: rgb(205, 2, 2);
-  margin-left: 0px;
-}
-body .container .container-left .new .btn-edit,
-body .container .container-left .edit .btn-edit {
-  background-color: rgb(64, 121, 253);
-}
-body .container .container-left .new .btn-delete,
-body .container .container-left .edit .btn-delete {
-  background-color: rgb(205, 2, 2);
-  margin-left: 0px;
-}
-body .container .container-left .color-container #color-label,
-body .container .container-left .color-container #color {
+body .container .container-left .new .color-container #color-label,
+body .container .container-left .new .color-container #color,
+body .container .container-left .edit .color-container #color-label,
+body .container .container-left .edit .color-container #color {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -103,7 +91,32 @@ body .container .container-right .save h2 {
   padding: 10px 10px;
   width: 50%;
 }
-body .container .container-right .save .save-note #note {
+body .container .container-right .save .btn {
+  padding: 10px 5px;
+  margin-left: 280px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  border: 5px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+}
+body .container .container-right .save .btn:hover {
+  background-color: #99da01;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body .container .container-right .save .btn-cancel {
+  background-color: rgb(205, 2, 2);
+  margin-left: 0px;
+}
+body .container .container-right .save .btn-edit {
+  background-color: rgb(64, 121, 253);
+}
+body .container .container-right .save .btn-delete {
+  background-color: rgb(205, 2, 2);
+  margin-left: 0px;
+}
+body .container .container-right .save-note #note {
   border-radius: 10px;
   padding: 10px 15px;
   margin: 10px 35px 25px;
@@ -112,7 +125,7 @@ body .container .container-right .save .save-note #note {
   border: 5px solid #ccc;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
-body .container .container-right .save .save-note #title-note {
+body .container .container-right .save-note #title-note {
   padding: 8px 35px;
   margin: 10px 35px;
   font-size: 20px;
@@ -121,7 +134,7 @@ body .container .container-right .save .save-note #title-note {
   border-radius: 10px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
-body .container .container-right .save .time #timeD {
+body .container .container-right .save-note #timeD {
   padding: 8px 35px;
   margin: 1px 35px 10px;
   font-size: 20px;
