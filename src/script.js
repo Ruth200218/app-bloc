@@ -20,7 +20,7 @@ btnSave.addEventListener('click', ()=>{
      count = parseInt(localStorage.getItem('count'));
   } else {
     localStorage.setItem('count', + 1);
-  }
+  };
 
   localStorage.setItem(`note-${count}`, JSON.stringify(values));
 
@@ -35,11 +35,13 @@ btnSave.addEventListener('click', ()=>{
   const minutes = loadNote.minutes;
   const seconds = loadNote.seconds;
     
-    saveNote.innerHTML += `<p id="title-note">${noteTitle}</p>
-                          <textarea id="note" cols="50" rows="10" ref="textarea">${noteContent}</textarea>
-                          <p id='timeD'>${day}/${month}/${year} ${hour}:${minutes}:${seconds}</p>
-                          <button class="btn btn-edit">Editar</button>
-                          <button class="btn btn-delete">Elminar</button>`;
+    saveNote.innerHTML += `<div id= id-${count}>
+                              <p id="title-note">${noteTitle}</p>
+                              <textarea id="note" cols="50" rows="10" ref="textarea">${noteContent}</textarea>
+                              <p id='timeD'>${day}/${month}/${year} ${hour}:${minutes}:${seconds}</p>
+                              <button class="btn btn-edit">Editar</button>
+                              <button class="btn btn-delete">Elminar</button>
+                            </div>`;
 
   document.querySelector('#title-note').value = '';
   document.querySelector('#note').value = '';
@@ -64,14 +66,33 @@ btnSave.addEventListener('click', ()=>{
           const minutes = loadNote.minutes;
           const seconds = loadNote.seconds;
           
-          saveNote.innerHTML += `<p id="title-note">${noteTitle}</p>
-                                <textarea id="note" cols="50" rows="10" ref="textarea">${noteContent}</textarea>
-                                <p id='timeD'>${day}/${month}/${year} ${hour}:${minutes}:${seconds}</p>
-                                <button class="btn btn-edit">Editar</button>
-                                <button class="btn btn-delete">Elminar</button>`;
-        }
+          saveNote.innerHTML += `<div id= id-${i}>
+                                    <p id="title-note">${noteTitle}</p>
+                                    <textarea id="note" cols="50" rows="10" ref="textarea">${noteContent}</textarea>
+                                    <p id='timeD'>${day}/${month}/${year} ${hour}:${minutes}:${seconds}</p>
+                                    <button class="btn btn-edit">Editar</button>
+                                    <button class="btn btn-delete">Elminar</button>
+                                  </div>`;
+        };
         
-      }
-    }
+      };
+    };
+
+    const btnDelete = document.querySelectorAll('.btn-delete');
     
-}
+    btnDelete.forEach((button) =>{
+      button.addEventListener('click', (event)=> {
+        if(event.target.classList.contains('btn-delete')){
+          const noteContainer = event.target.parentElement;
+          const noteId = parseInt(noteContainer.id.replace('id-', ''));
+          
+            if(localStorage.hasOwnProperty(`note-${noteId}`)){
+                localStorage.removeItem(`note-${noteId}`);
+                noteContainer.remove();
+            };
+        };
+      });
+    });
+    
+};
+
