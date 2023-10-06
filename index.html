@@ -23,23 +23,13 @@
                     <button class="btn btn-save">Guardar</button>
                 </div>
             </div>
-            <!-- <div class="edit">
-                <h2>Edita las notas</h2>
-                <div>
-                    <label class="title-note" for="note-edit">Nota:</label>
-                    <textarea id="note" rows="3" placeholder="Escribe tu nota aquí!" ref="textarea"></textarea>
-                </div>
-                <div>
-                    <button class="btn btn-save">Guardar</button>
-                    <button class="btn btn-cancel">Cancelar</button>
-                </div>
-            </div> -->
 
             <!-- <div class="color-container">
                 <label id="color-label" for="color">Selecciona el color de la nota</label>
                 <input id="color" type="color">
             </div> -->
         </div>
+
         <!--CONTAINER RIGHT-->
         <div class="container-right">
             <div class="save">
@@ -47,6 +37,17 @@
                 <div class="save-note">
                     <!-- NOTAS GUARDADAS -->
                 </div>
+            </div>
+        </div>
+
+        <!-- CONTAINER EDIT -->
+        <div class="edit">
+            <h2>Edición de notas</h2>
+            <input type="text" id="title-note" placeholder="Modifica el titulo de tu nota">
+            <textarea id="note" cols="50" rows="10" placeholder="Escribe tu nota " ref="textarea"></textarea>
+            <div class="btn-container">
+                <button class="btn btn-save">Guardar</button>
+                <button class="btn btn-cancel">Cancelar</button>
             </div>
         </div>
     </div>

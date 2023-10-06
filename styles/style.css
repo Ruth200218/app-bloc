@@ -91,7 +91,7 @@ body .container .container-right .save h2 {
   padding: 10px 10px;
   width: 50%;
 }
-body .container .container-right .save .btn {
+body .container .container-right .save .save-note .btn {
   padding: 10px 5px;
   margin-left: 280px;
   border-radius: 5px;
@@ -100,23 +100,19 @@ body .container .container-right .save .btn {
   border: 5px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
-body .container .container-right .save .btn:hover {
+body .container .container-right .save .save-note .btn:hover {
   background-color: #99da01;
   cursor: pointer;
   transition: 0.5s;
 }
-body .container .container-right .save .btn-cancel {
-  background-color: rgb(205, 2, 2);
-  margin-left: 0px;
-}
-body .container .container-right .save .btn-edit {
+body .container .container-right .save .save-note .btn-edit {
   background-color: rgb(64, 121, 253);
 }
-body .container .container-right .save .btn-delete {
+body .container .container-right .save .save-note .btn-delete {
   background-color: rgb(205, 2, 2);
   margin-left: 0px;
 }
-body .container .container-right .save-note #note {
+body .container .container-right .save .save-note #note {
   border-radius: 10px;
   padding: 10px 15px;
   margin: 10px 35px 25px;
@@ -125,7 +121,7 @@ body .container .container-right .save-note #note {
   border: 5px solid #ccc;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
-body .container .container-right .save-note #title-note {
+body .container .container-right .save .save-note #title-note {
   padding: 8px 35px;
   margin: 10px 35px;
   font-size: 20px;
@@ -134,7 +130,7 @@ body .container .container-right .save-note #title-note {
   border-radius: 10px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
 }
-body .container .container-right .save-note #timeD {
+body .container .container-right .save .save-note #timeD {
   padding: 8px 35px;
   margin: 1px 35px 10px;
   font-size: 20px;
@@ -143,6 +139,87 @@ body .container .container-right .save-note #timeD {
   border-radius: 10px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
   background-color: #fff;
+}
+body .container .edit {
+  display: flex;
+  flex-direction: column;
+  background-color: #d2d0e6;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+body .container .edit h2 {
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: rgb(241, 174, 174);
+  border-radius: 5px;
+}
+body .container .edit #title-note {
+  padding: 8px 35px;
+  margin: 10px 35px;
+  font-size: 20px;
+  width: 50%;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+}
+body .container .edit #note {
+  padding: 10px 15px;
+  margin: 10px 35px 25px;
+  resize: none;
+  font-size: 20px;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+}
+body .container .edit #note:focus {
+  transition: 0.3s;
+  border-color: #564caf;
+}
+body .container .edit #timeD {
+  padding: 8px 35px;
+  margin: 1px 35px 10px;
+  font-size: 20px;
+  width: 25%;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+  background-color: #fff;
+}
+body .container .edit .btn-container {
+  display: flex;
+  justify-content: flex-start;
+}
+body .container .edit .btn-container .btn {
+  margin-right: 10px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  border: 5px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+}
+body .container .edit .btn-container .btn:hover {
+  background-color: #99da01;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body .container .edit .btn-container .btn-save {
+  background-color: rgb(2, 177, 2);
+}
+body .container .edit .btn-container .btn-cancel {
+  background-color: rgb(205, 2, 2);
+}
+body .container .show {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

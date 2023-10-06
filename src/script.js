@@ -46,7 +46,9 @@ btnSave.addEventListener('click', ()=>{
   document.querySelector('#title-note').value = '';
   document.querySelector('#note').value = '';
 
-    localStorage.setItem('count', count + 1);
+  localStorage.setItem('count', count + 1);
+
+  alert('Nota guardada exitosamente');
 
   });
 
@@ -78,7 +80,9 @@ btnSave.addEventListener('click', ()=>{
       };
     };
 
-    const btnDelete = document.querySelectorAll('.btn-delete');
+  // BOTÓN DE ELIMNAR
+
+  const btnDelete = document.querySelectorAll('.btn-delete');
     
     btnDelete.forEach((button) =>{
       button.addEventListener('click', (event)=> {
@@ -93,6 +97,19 @@ btnSave.addEventListener('click', ()=>{
         };
       });
     });
-    
+
+    // BOTÓN DE EDITAR
+
+  const btnEdit = document.querySelector('.btn-edit');
+  const editNote = document.querySelector('.edit');
+  const btnCancel = document.querySelector('.btn-cancel');
+
+  btnEdit.addEventListener('click', () => {
+    editNote.classList.add('show');
+  });
+  
+  btnCancel.addEventListener ('click', () => {
+    editNote.classList.remove('show');
+  });
 };
 

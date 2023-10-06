@@ -105,9 +105,137 @@ body {
                     width: 50%;
                 }
 
+                .save-note {
+
+                    .btn {
+                        padding: 10px 5px;
+                        margin-left: 280px;
+                        border-radius: 5px;
+                        font-size: 18px;
+                        color: white;
+                        border: 5px;
+                        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+
+                        &:hover {
+                            background-color: #99da01;
+                            cursor: pointer;
+                            transition: 0.5s;
+                        }
+                    }
+
+                    .btn-edit {
+                        background-color: rgb(64, 121, 253);
+                    }
+
+                    .btn-delete {
+                        background-color: rgb(205, 2, 2);
+                        margin-left: 0px;
+                    }
+
+                    #note {
+                        border-radius: 10px;
+                        padding: 10px 15px;
+                        margin: 10px 35px 25px;
+                        resize: none;
+                        font-size: 20px;
+                        border: 5px solid #ccc;
+                        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+                    }
+
+                    #title-note {
+                        padding: 8px 35px;
+                        margin: 10px 35px;
+                        font-size: 20px;
+                        width: 50%;
+                        border: 5px solid #ccc;
+                        border-radius: 10px;
+                        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+
+                    }
+
+                    #timeD {
+                        padding: 8px 35px;
+                        margin: 1px 35px 10px;
+                        font-size: 20px;
+                        width: 25%;
+                        border: 5px solid #ccc;
+                        border-radius: 10px;
+                        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+                        background-color: #fff;
+                    }
+
+                }
+            }
+
+
+        }
+
+        .edit {
+            display: flex;
+            flex-direction: column;
+            background-color: #d2d0e6;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            pointer-events: none;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+
+            h2 {
+                margin: 0 auto;
+                padding: 10px 20px;
+                margin-top: 15px;
+                background-color: rgb(241, 174, 174);
+                border-radius: 5px;
+            }
+
+            #title-note {
+                padding: 8px 35px;
+                margin: 10px 35px;
+                font-size: 20px;
+                width: 50%;
+                border: 5px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+            }
+
+            #note {
+                padding: 10px 15px;
+                margin: 10px 35px 25px;
+                resize: none;
+                font-size: 20px;
+                border: 5px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+
+                &:focus {
+                    transition: 0.3s;
+                    border-color: #564caf;
+                }
+            }
+
+            #timeD {
+                padding: 8px 35px;
+                margin: 1px 35px 10px;
+                font-size: 20px;
+                width: 25%;
+                border: 5px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
+                background-color: #fff;
+            }
+
+            .btn-container {
+
+                display: flex;
+                justify-content: flex-start;
+
                 .btn {
+                    margin-right: 10px;
                     padding: 10px 5px;
-                    margin-left: 280px;
                     border-radius: 5px;
                     font-size: 18px;
                     color: white;
@@ -121,56 +249,20 @@ body {
                     }
                 }
 
+                .btn-save {
+                    background-color: rgb(2, 177, 2);
+                }
+
                 .btn-cancel {
                     background-color: rgb(205, 2, 2);
-                    margin-left: 0px;
-                }
-
-                .btn-edit {
-                    background-color: rgb(64, 121, 253);
-                }
-
-                .btn-delete {
-                    background-color: rgb(205, 2, 2);
-                    margin-left: 0px;
                 }
             }
+        }
 
-            .save-note {
 
-                #note {
-                    border-radius: 10px;
-                    padding: 10px 15px;
-                    margin: 10px 35px 25px;
-                    resize: none;
-                    font-size: 20px;
-                    border: 5px solid #ccc;
-                    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
-                }
-
-                #title-note {
-                    padding: 8px 35px;
-                    margin: 10px 35px;
-                    font-size: 20px;
-                    width: 50%;
-                    border: 5px solid #ccc;
-                    border-radius: 10px;
-                    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
-
-                }
-
-                #timeD {
-                    padding: 8px 35px;
-                    margin: 1px 35px 10px;
-                    font-size: 20px;
-                    width: 25%;
-                    border: 5px solid #ccc;
-                    border-radius: 10px;
-                    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.375);
-                    background-color: #fff;
-                }
-
-            }
+        .show {
+            pointer-events: auto;
+            opacity: 1;
         }
     }
 }
