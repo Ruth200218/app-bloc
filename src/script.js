@@ -106,6 +106,33 @@ btnSave.addEventListener('click', ()=>{
 
   btnEdit.addEventListener('click', () => {
     editNote.classList.add('show');
+    if (localStorage.hasOwnProperty('count')){
+      const count = parseInt(localStorage.getItem('count'));
+      for (let i = 0; i<= count; i++){
+        if (localStorage.hasOwnProperty(`note-${i}`)){
+          const loadNote = JSON.parse(localStorage.getItem(`note-${i}`))
+
+          const noteTitle = loadNote.title;
+          const noteContent = loadNote.content;
+          const day = loadNote.day;
+          const month = loadNote.month;
+          const year = loadNote.year;
+          const hour = loadNote.hour;
+          const minutes = loadNote.minutes;
+          const seconds = loadNote.seconds;
+
+          editNote.innerHTML += `<div id= id-${i}>
+                                    <input type="text" id="title-note" ${noteTitle}/>
+                                    <textarea id="note" cols="50" rows="10" ref="textarea">${noteContent}</textarea>
+                                    <p id='timeD'>${day}/${month}/${year} ${hour}:${minutes}:${seconds}</p>
+                                    <div class="btn-container">
+                                      <button class="btn btn-save">Guardar</button>
+                                      <button class="btn btn-cancel">Cancelar</button>
+                                    </div>
+                                  </div>`;
+        };
+      };
+    };
   });
   
   btnCancel.addEventListener ('click', () => {
