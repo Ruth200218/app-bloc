@@ -1,10 +1,11 @@
 const btnSave = document.querySelector('.btn-save');
 const saveNote = document.querySelector('.save-note');
-const date = new Date();
 
 let count = 0;
 
 btnSave.addEventListener('click', ()=>{
+  const date = new Date();
+
   const values = {
     title : document.querySelector('#title-note').value,
     content : document.querySelector('#note').value,
@@ -70,9 +71,9 @@ btnSave.addEventListener('click', ()=>{
           
           saveNote.innerHTML += `<div id= id-${i}>
                                     <p id="title-note">${noteTitle}</p>
-                                    <textarea id="note" cols="50" rows="10" ref="textarea">${noteContent}</textarea>
+                                    <p id="note">${noteContent}</p>
                                     <p id='timeD'>${day}/${month}/${year} ${hour}:${minutes}:${seconds}</p>
-                                    <button class="btn btn-edit">Editar</button>
+                                    <button id="count-${i}" class="btn btn-edit">Editar</button>
                                     <button class="btn btn-delete">Elminar</button>
                                   </div>`;
         };
@@ -104,7 +105,13 @@ btnSave.addEventListener('click', ()=>{
   const editNote = document.querySelector('.edit');
   const btnCancel = document.querySelector('.btn-cancel');
 
-  btnEdit.addEventListener('click', () => {
+  btnEdit?.addEventListener('click', (e) => {
+
+    const idElement = e.target.id;
+    const arrId = idElement.split("-");
+    const id = arrId[1];
+    console.log(id);
+
     editNote.classList.add('show');
     if (localStorage.hasOwnProperty('count')){
       const count = parseInt(localStorage.getItem('count'));
@@ -122,7 +129,7 @@ btnSave.addEventListener('click', ()=>{
           const seconds = loadNote.seconds;
 
           editNote.innerHTML += `<div id= id-${i}>
-                                    <input type="text" id="title-note" ${noteTitle}/>
+                                    <input type="text" id="title-note" value="${noteTitle}"/>
                                     <textarea id="note" cols="50" rows="10" ref="textarea">${noteContent}</textarea>
                                     <p id='timeD'>${day}/${month}/${year} ${hour}:${minutes}:${seconds}</p>
                                     <div class="btn-container">
@@ -135,7 +142,7 @@ btnSave.addEventListener('click', ()=>{
     };
   });
   
-  btnCancel.addEventListener ('click', () => {
+  btnCancel?.addEventListener ('click', () => {
     editNote.classList.remove('show');
   });
 };
